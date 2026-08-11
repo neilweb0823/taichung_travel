@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台中旅遊趣</title>
-    <!-- 建議引入 Bootstrap Icons 以便使用搜尋圖示 -->
+    <!-- 引入 Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/mycss01.css">
@@ -36,12 +36,11 @@
 
     <!-- 主要內容區 -->
     <main class="container my-4">
-
         <!-- 主視覺區塊 -->
-        <section class="hero-banner ">
-            <img class="img-fluid w-100 opacity-75 d-block" src="/images/湖心亭.jpg" alt="台中公園湖心亭">
+        <section class="hero-banner">
+            <img class="w-100 opacity-75 d-block" src="/images/湖心亭.jpg" alt="台中公園湖心亭">
 
-            <div class="context-area">
+            <div class="context-area d-block">
                 <h1 class="h2 fw-bold mb-3">漫遊台中，遇見美好</h1>
                 <p class="fw-semibold mb-2">台中擁有豐富的人文歷史、自然景觀與特色美食，是一座適合慢遊細品的城市。</p>
                 <p class="fw-semibold mb-0">無論漫步草悟道、欣賞高美濕地夕陽，或走進巷弄品嚐在地小吃，都能感受到這座城市獨有的溫度與活力。</p>
@@ -52,22 +51,13 @@
             </div>
         </section>
     </main>
+
     <footer class="footer mt-5">
         <div class="container text-center py-4">
-
             <h4>台中慢遊趣</h4>
-
-            <p class="mb-3">
-                探索台中的美好，發現每一段旅程的驚喜。
-            </p>
-
-            <p class="mb-1">
-                📧 travel@example.com
-            </p>
-
-            <p>
-                📞 (04) 1234-5678
-            </p>
+            <p class="mb-3">探索台中的美好，發現每一段旅程的驚喜。</p>
+            <p class="mb-1">📧 travel@example.com</p>
+            <p>📞 (04) 1234-5678</p>
 
             <div class="footer-link my-3">
                 <a href="#">首頁</a>
@@ -77,12 +67,10 @@
 
             <hr>
 
-            <p class="mb-0">
-                © 2026 台中慢遊趣 All Rights Reserved.
-            </p>
-
+            <p class="mb-0">© 2026 台中慢遊趣 All Rights Reserved.</p>
         </div>
     </footer>
+
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 
