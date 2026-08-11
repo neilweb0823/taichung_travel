@@ -111,15 +111,15 @@
 
                     <option value="">全部地區</option>
 
-                    <option value="中區">中區</option>
-                    <option value="西區">西區</option>
-                    <option value="北區">北區</option>
-                    <option value="西屯區">西屯區</option>
-                    <option value="南屯區">南屯區</option>
-                    <option value="北屯區">北屯區</option>
+                    @foreach($districts as $district)
+
+                    <option value="{{ $district }}">
+                        {{ $district }}
+                    </option>
+
+                    @endforeach
 
                 </select>
-
             </div>
 
 
@@ -130,11 +130,11 @@
 
                     <option value="">預設排序</option>
 
-                    <option value="name-asc">
+                    <option value="id-asc">
                         名稱：A → Z
                     </option>
 
-                    <option value="name-desc">
+                    <option value="id-desc">
                         名稱：Z → A
                     </option>
 

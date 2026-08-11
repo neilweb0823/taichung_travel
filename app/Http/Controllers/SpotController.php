@@ -11,7 +11,13 @@ class SpotController extends Controller
     public function list()
     {
         $spots = Spot::all();
-        return view('front.travel_list', compact('spots'));
+
+        $districts = Spot::select('district')
+            ->distinct()
+            ->orderBy('district')
+            ->pluck('district');
+
+        return view('front.travel_list', compact('spots', 'districts'));
     }
 
     public function detail(int $id)
