@@ -1,0 +1,192 @@
+/* 字型 */
+/* @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap'); */
+
+body {
+    font-family: "Zen Maru Gothic", sans-serif;
+}
+
+/* 配色 */
+:root {
+    /* 文字顏色 */
+    --text-color01: #f2f2f5;
+
+
+    /* 混凝土 / 城市底色 */
+    --graffiti-concrete-ash: #BDBDBF;
+    /* 水泥灰塵 */
+    --graffiti-smog-gray: #8A8C8F;
+    /* 工業霧霾 */
+    --graffiti-wall-crack: #5F6163;
+    /* 牆面裂紋 */
+
+    /* 冷色系 / 夜城感 */
+    --graffiti-rusty-blue: #5580A0;
+    /* 生鏽藍漆 */
+    --graffiti-neon-ocean: #3A6F7D;
+    /* 退色霓虹藍 */
+    --graffiti-deep-alley: #002C2F;
+    /* 深巷暗影 */
+    --graffiti-toxic-teal: #1F4E4A;
+    /* 污濁綠藍 */
+
+    /* 暖色系 / 鏽蝕與塗鴉 */
+    --graffiti-burnt-ochre: #CC8A4D;
+    /* 燒焦赭石 */
+    --graffiti-rust-orange: #9E5B2A;
+    /* 鐵鏽橘 */
+    --graffiti-dried-blood: #7A2E2A;
+    /* 乾涸血漬 */
+    --graffiti-brick-dust: #A14A3B;
+    /* 磚牆粉塵 */
+
+    /* 暗黑系 / 頹廢核心 */
+    --graffiti-asphalt-black: #1B1B1B;
+    /* 柏油黑 */
+    --graffiti-oil-stain: #0F1412;
+    /* 油漬暗黑 */
+    --graffiti-basement-shadow: #232122;
+    /* 地下室陰影 */
+
+    /* 金屬 / 工業感 */
+    --graffiti-steel-mist: #6F7C7A;
+    /* 鋼鐵霧感 */
+    --graffiti-lead-gray: #4B4E50;
+    /* 鉛灰色 */
+    --graffiti-gunmetal: #2F3538;
+    /* 槍鐵灰 */
+
+    /* 點綴 / 塗鴉亮色 */
+    --graffiti-acid-yellow: #C2C94B;
+    /* 酸性黃 */
+    --graffiti-toxic-lime: #7E8F3A;
+    /* 有毒萊姆 */
+    --graffiti-faded-purple: #5A4A63;
+    /* 退色紫噴漆 */
+}
+
+/* 文字相關 */
+.fw-100 {
+    font-weight: 100;
+}
+
+.fw-200 {
+    font-weight: 200;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.title-01 {
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--graffiti-neon-ocean);
+    text-shadow:
+        2px 2px var(--graffiti-deep-alley),
+        4px 4px 8px rgba(0, 0, 0, 0.6);
+    letter-spacing: 2px;
+}
+
+.title-02 {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--graffiti-rusty-blue);
+}
+
+/* roller .roller-l  .roller-r  .roller-t   .roller-b */
+.roller-l {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-l .roller-l_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* 更有旅遊氛圍的漸層（夕陽+海岸色調） */
+    background: linear-gradient(135deg,
+            rgba(255, 204, 153, 0.25) 0%,
+            rgba(255, 140, 66, 0.55) 40%,
+            rgba(0, 180, 216, 0.45) 100%);
+
+    /* 柔焦玻璃質感 */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    left: -110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 柔和過渡 */
+    transition: left 0.9s cubic-bezier(0.77, 0, 0.175, 1),
+        opacity 0.6s ease,
+        transform 0.8s ease;
+
+    /* 初始透明感 */
+    opacity: 0.95;
+
+    /* 微立體感 */
+    box-shadow:
+        inset 0 0 80px rgba(255, 255, 255, 0.15),
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    /* 細緻圓角（若父層有圓角會更自然） */
+    border-radius: 12px;
+
+    /* 微縮放增加動態感 */
+    transform: scale(1.05);
+}
+
+
+.roller-l:hover .roller-l_box {
+    left: 0;
+}
+
+.roller-r {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-r .roller-r_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(228, 205, 186, 0.3), rgba(214, 107, 20, 0.6));
+    right: -100%;
+    display: flex;
+    /* 垂直置中 */
+    align-items: center;
+    /* 水平置中 */
+    justify-content: center;
+    transition: right 1s;
+}
+
+.roller-r:hover .roller-r_box {
+    right: 0;
+}

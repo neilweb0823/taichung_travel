@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* Sports Energy Theme */
+:root {
+    /* 品牌主色 */
+    --primary-color: #0F4CDB;
+    /* 運動藍 */
+
+    /* 品牌輔色 */
+    --secondary-color: #FF6B35;
+    /* 活力橘 */
+
+    /* 強調色 */
+    --accent-color: #22C55E;
+    /* 勝利綠 */
+
+    /* 警示色 */
+    --warning-color: #EF4444;
+    /* 熱血紅 */
+
+    /* 背景色 */
+    --background-primary: #F8FAFC;
+    /* 主背景 */
+    --background-secondary: #E2E8F0;
+    /* 區塊背景 */
+
+    /* 卡片色 */
+    --card-background: #FFFFFF;
+
+    /* 邊框色 */
+    --border-color: #CBD5E1;
+
+    /* 文字色 */
+    --text-primary: #0F172A;
+    /* 主文字 */
+    --text-secondary: #64748B;
+    /* 次文字 */
+    --text-light: #FFFFFF;
+    /* 淺色文字 */
+
+    /* 按鈕色 */
+    --button-primary: #0F4CDB;
+    --button-primary-hover: #0A3BAA;
+
+    --button-secondary: #FF6B35;
+    --button-secondary-hover: #E85A24;
+
+    /* 狀態色 */
+    --success-color: #22C55E;
+    --error-color: #EF4444;
+    --info-color: #06B6D4;
+}
+
+/* 字體粗細 */
+.fw-100 {
+    font-weight: 100;
+}
+
+.fw-200 {
+    font-weight: 200;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+/* 字體顏色 */
+.btn-text-primary {
+    color: var(--text-primary);
+}
+
+.btn-text-secondary {
+    color: var(--text-secondary);
+}
+
+/* 卷軸特效roller */
+
+/* .roller-t .roller-b .roller-l .roller-r */
+/* 由上往下 .roller-t */
+.roller-t {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-t .roller_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* 幾乎透明 */
+    background: rgba(255, 255, 255, 0.5);
+
+    /* 輕微柔焦 */
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    top: -100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: top 1.5s;
+}
+
+.roller-t:hover .roller_box {
+    top: 0;
+}
+
+/* 由下往上 .roller-b */
+.roller-b {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-b .roller_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* 幾乎透明 */
+    background: rgba(255, 255, 255, 0.5);
+
+    /* 輕微柔焦 */
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    bottom: -100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: bottom 1.5s;
+}
+
+.roller-b:hover .roller_box {
+    bottom: 0;
+}
+
+/* 由左往右 .roller-l */
+.roller-l {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-l .roller_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* 幾乎透明 */
+    background: rgba(255, 255, 255, 0.5);
+
+    /* 輕微柔焦 */
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    left: -100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: left 1.5s;
+}
+
+.roller-l:hover .roller_box {
+    left: 0;
+}
+
+/* 由右往左 .roller-r */
+.roller-r {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-r .roller_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* 幾乎透明 */
+    background: rgba(255, 255, 255, 0.5);
+
+    /* 輕微柔焦 */
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    right: -100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: right 1.5s;
+}
+
+.roller-r:hover .roller_box {
+    right: 0;
+}
+
+/* 背景圖 */
+.bg-cover {
+    background-position: center center;
+    background-size: cover;
+}
