@@ -15,6 +15,8 @@
 
             <h1 class="mb-4">景點管理</h1>
 
+            <a href="/admin/spots/create" class="btn btn-success btn-lg fs-6 mb-4"> ＋ 新增景點 </a>
+
             <table class="table table-bordered">
 
                 <thead>
