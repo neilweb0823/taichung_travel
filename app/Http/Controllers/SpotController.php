@@ -38,17 +38,23 @@ class SpotController extends Controller
         return view('admin.spots.create');
     }
 
-    public function store(Request $req)
+    public function store(Request $request)
     {
-        Favorite::create([
-            'spotId' => $req->spotId
+        Spot::create([
+            'name' => $request->name,
+            'subtitle' => $request->subtitle,
+            'summary' => $request->summary,
+            'description' => $request->description,
+            'category' => $request->category,
+            'district' => $request->district,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'image' => $request->image,
         ]);
 
-        return response()->json([
-            'success' => true,
-            'message' => '收藏成功！'
-        ]);
+        return redirect('/admin/spots');
     }
+
     public function edit($id)
     {
         $spot = Spot::find($id);

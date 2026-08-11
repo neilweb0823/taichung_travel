@@ -605,17 +605,17 @@
 
 
             // 只有一頁時不用顯示頁碼
-            if (totalPages <= 1) {
+            // if (totalPages <= 1) {
 
-                $("#pageInfo").text(
-                    "共 " +
-                    $("#spotList .spot-card").length +
-                    " 筆景點"
-                );
+            //     $("#pageInfo").text(
+            //         "共 " +
+            //         $("#spotList .spot-card").length +
+            //         " 筆景點"
+            //     );
 
-                return;
+            //     return;
 
-            }
+            // }
 
 
             // 上一頁
@@ -833,4 +833,3 @@
 </body>
 
 </html>
-```
