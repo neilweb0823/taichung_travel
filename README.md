@@ -172,6 +172,8 @@
 Laravel 透過 Migration 建立資料表，並使用 Eloquent ORM 與資料庫進行資料操作。
 
 ![資料庫設計](README_images/08_database.png)
+![資料庫設計-favorites資料表](README_images/08-1_database_favorites.png)
+![資料庫設計-spots資料表](README_images/08-2_database_spots.png)
 
 ---
 
@@ -213,6 +215,10 @@ AI 協助的項目包含：
 AI 主要作為開發輔助工具，實際程式碼由開發者進行修改、測試及整合。
 
 ![AI 使用紀錄](README_images/10_ai.png)
+![AI景點介紹01](README_images/AI景點介紹01.png)
+![AI景點介紹01](README_images/AI景點介紹02.png)
+![AI景點副標題](README_images/AI景點副標題.png)
+
 
 ---
 
@@ -226,7 +232,10 @@ AI 主要作為開發輔助工具，實際程式碼由開發者進行修改、�
 
 首頁 RWD 測試結果可參考：
 
-![首頁 RWD](README_images/01_home.png)
+![首頁 RWD-375px](README_images/14-1_rwd-375px.png) 
+![首頁 RWD-768px](README_images/14-2_rwd-768px.png) 
+![首頁 RWD-1200px](README_images/14-3_rwd-1200px.png) 
+
 
 ---
 
@@ -291,7 +300,9 @@ AI 主要作為開發輔助工具，實際程式碼由開發者進行修改、�
 
 網站在不同尺寸下皆可以正常顯示，手機版 575px 畫面沒有產生水平溢出。
 
-![測試結果二](README_images/12_test_02.png)
+![首頁 RWD-375px](README_images/rwd-375px.png) 
+![首頁 RWD-768px](README_images/rwd-768px.png) 
+![首頁 RWD-1200px](README_images/rwd-1200px.png) 
 
 ---
 
