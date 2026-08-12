@@ -192,6 +192,10 @@ Laravel 透過 Migration 建立資料表，並使用 Eloquent ORM 與資料庫�
 API 透過 HTTP Method 區分不同操作，並由 Laravel Controller 負責接收請求及處理資料。
 
 ![API 測試](README_images/09_api.png)
+![API 測試](README_images/api.png)
+
+
+
 
 ---
 
