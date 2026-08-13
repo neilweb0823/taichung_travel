@@ -152,8 +152,18 @@
 | Delete | 刪除景點資料 |
 
 透過 CRUD 可以讓管理者直接管理網站中的景點資料，而不需要直接修改程式碼。
+![景點管理頁面](README_images/景點管理頁.png)
+![新增景點](README_images/新增景點成功.png)
+![新增景點結果](README_images/新增景點結果.png)
+![刪除景點頁面](README_images/刪除景點頁面.png)
+![刪除景點成功](README_images/刪除景點成功.png)
+![編輯景點頁面](README_images/編輯景點頁面.png)
+![編輯景點內容](README_images/編輯景點內容.png)
+![編輯景點成功](README_images/編輯景點成功.png)
+![編輯景點結果](README_images/編輯景點結果.png)
+![景點查詢成功01](README_images/景點查詢成功01.png)
+![景點查詢成功02](README_images/景點查詢成功02.png)
 
----
 
 # 6. 資料庫設計
 
@@ -304,9 +314,9 @@ AI 主要作為開發輔助工具，實際程式碼由開發者進行修改、�
 
 網站在不同尺寸下皆可以正常顯示，手機版 575px 畫面沒有產生水平溢出。
 
-![首頁 RWD-375px](README_images/rwd-375px.png) 
-![首頁 RWD-768px](README_images/rwd-768px.png) 
-![首頁 RWD-1200px](README_images/rwd-1200px.png) 
+![首頁 RWD-375px](README_images/14-1_rwd-375px.png) 
+![首頁 RWD-768px](README_images/14-2_rwd-768px.png) 
+![首頁 RWD-1200px](README_images/14-3_rwd-1200px.png) 
 
 ---
 
@@ -361,7 +371,15 @@ README_images/
 ├── 09_api.png
 ├── 10_ai.png
 ├── 11_test_01.png
-└── 12_test_02.png
+├── 12_test_02.png
+├── 14-1_rwd-375px.png
+├── 14-2_rwd-768px.png
+├── 14-3_rwd-1200px.png
+├── AI景點介紹01.png
+├── AI景點介紹02.png
+├── AI景點副標題.png
+└── api.png
+
 ```
 
 以上截圖分別展示網站首頁、景點瀏覽、景點詳細資訊、收藏功能、後台 CRUD、資料庫、API、AI 輔助開發以及測試結果。

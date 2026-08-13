@@ -103,6 +103,23 @@
         </div>
 
 
+        <!-- ==================== 景點統計圖表 ==================== -->
+
+        <div class="card mb-4">
+
+            <div class="card-body">
+
+                <h5 class="card-title mb-3">
+                    景點行政區統計
+                </h5>
+
+                <div style="height: 400px;">
+                    <canvas id="districtChart"></canvas>
+                </div>
+
+            </div>
+
+        </div>
         <!-- ==================== 景點資料表格 ==================== -->
 
         <table class="table table-bordered table-hover">
@@ -152,7 +169,7 @@
     <!-- Bootstrap -->
 
     <script src="/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- ==================== API ==================== -->
 
@@ -162,7 +179,129 @@
         // ========================================
 
         let allSpots = [];
+        let districtChart = null;
+        // ========================================
+        // 建立行政區景點統計圖
+        // ========================================
 
+        function renderDistrictChart(spots) {
+
+            // 統計每個行政區的景點數量
+
+            const districtCount = {};
+
+            spots.forEach(function(spot) {
+
+                const district = spot.district || "未分類";
+
+                if (districtCount[district]) {
+
+                    districtCount[district]++;
+
+                } else {
+
+                    districtCount[district] = 1;
+
+                }
+
+            });
+
+
+            // 行政區名稱
+
+            const labels = Object.keys(districtCount);
+
+
+            // 景點數量
+
+            const data = Object.values(districtCount);
+
+
+            // 取得 canvas
+
+            const canvas =
+                document.getElementById("districtChart");
+
+
+            // 如果之前已經有圖表
+            // 先刪除，避免重新搜尋時重複建立
+
+            if (districtChart) {
+
+                districtChart.destroy();
+
+            }
+
+
+            // 建立 Chart.js
+
+            districtChart = new Chart(canvas, {
+
+                type: "bar",
+
+                data: {
+
+                    labels: labels,
+
+                    datasets: [{
+
+                        label: "景點數量",
+
+                        data: data,
+
+                        borderWidth: 1
+
+                    }]
+
+                },
+
+                options: {
+
+                    responsive: true,
+
+                    maintainAspectRatio: false,
+
+                    scales: {
+
+                        y: {
+
+                            beginAtZero: true,
+
+                            ticks: {
+
+                                stepSize: 1
+
+                            },
+
+                            title: {
+
+                                display: true,
+
+                                text: "景點數量"
+
+                            }
+
+                        },
+
+                        x: {
+
+                            title: {
+
+                                display: true,
+
+                                text: "行政區"
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            });
+
+        }
 
         // ========================================
         // 顯示 API 訊息
@@ -351,6 +490,9 @@
 
                     renderSpots(allSpots);
 
+                    // 建立行政區統計圖
+
+                    renderDistrictChart(allSpots);
 
                     // 顯示成功訊息
 
